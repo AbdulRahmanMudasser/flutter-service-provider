@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             // Top Most Section
             Padding(
-              padding: const EdgeInsets.only(right: 20, left: 20),
+              padding: const EdgeInsets.only(right: 10, left: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
                       child: Image.asset(
-                        'assets/images/girl.jpg',
+                        'assets/images/boy profile.jpg',
                         height: 50,
                         width: 50,
                         fit: BoxFit.cover,
@@ -115,9 +115,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(right: 20),
                     width: MediaQuery.of(context).size.width,
                     decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10))
-                    ),
+                        color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(10))),
                     child: TextField(
                       style: GoogleFonts.dosis(
                         color: Colors.black,
@@ -139,6 +137,44 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
+                  ),
+
+                  // Service Categories Section
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          // Service Image
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(60)),
+                            ),
+                            child: Image.asset(
+                              'assets/images/laundry.png',
+                              height: 40,
+                              width: 40,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+
+                          const SizedBox(height: 5),
+
+                          // Service Title
+                          Text(
+                            'Cleaning',
+                            style: GoogleFonts.dosis(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              letterSpacing: 0.8,
+                              height: 1,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
